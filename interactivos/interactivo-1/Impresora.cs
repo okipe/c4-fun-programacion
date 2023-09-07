@@ -1,34 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Clases_Esquema
-
 {
-    class Constructor
+    class Impresora
     {
-        int varable_1;
-        string variable_2;
+        // Atributos
+        int codigoImpresora;
+        string marcaImpresora;
+        string modeloImpresora;
+        string serieImpresora;
 
-        public Constructor(int varable_1, string variable_2)
+        // Constructor
+        public Impresora()
         {
-            this.varable_1 = varable_1;
-            this.variable_2 = variable_2;
+            this.codigoImpresora = 1;
+            this.marcaImpresora = "Canon";
+            this.modeloImpresora = "G3100";
+            this.serieImpresora = "AGF45TY";
         }
-    }
-    internal static class Impresora
-    {
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
-        [STAThread]
-        static void Main()
+
+        // Constructor 2
+        public string encender()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            return $"Encendiendo la impresora {codigoImpresora} {marcaImpresora} {modeloImpresora}  {serieImpresora}";
+        }
+
+        public string imprimir()
+        {
+            return "Imprimiendo";
+        }
+
+        public string apagar()
+        {
+            return $"Apagando la impresora  {codigoImpresora} {marcaImpresora} {modeloImpresora} {serieImpresora}";
         }
     }
 }
+

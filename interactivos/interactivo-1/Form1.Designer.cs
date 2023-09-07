@@ -1,4 +1,4 @@
-﻿namespace interactivo_1
+﻿namespace Clases_Esquema
 {
     partial class Form1
     {
@@ -28,21 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.btnInstancia = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // btnInstancia
+            // 
+            this.btnInstancia.Location = new System.Drawing.Point(176, 204);
+            this.btnInstancia.Name = "btnInstancia";
+            this.btnInstancia.Size = new System.Drawing.Size(220, 43);
+            this.btnInstancia.TabIndex = 0;
+            this.btnInstancia.Text = "Instancia de impresora";
+            this.btnInstancia.UseVisualStyleBackColor = true;
+            this.btnInstancia.Click += new System.EventHandler(this.btnInstancia_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(572, 450);
+            this.Controls.Add(this.btnInstancia);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Clases";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private System.Windows.Forms.Button btnInstancia;
     }
 }
 
